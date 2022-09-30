@@ -306,12 +306,12 @@ padding:1rem;
   border: 1px solid var(--green);
   font-size: 18px;
 }
-/* .inner-blog-content a:hover{
+.inner-blog-content a:hover{
   cursor: pointer;
   background: var(--green);
   color: white;
   border-radius: 10px;
-} */
+}
 .main-footer{
   background-image: url(images/footer.png);
   background-size: cover;
