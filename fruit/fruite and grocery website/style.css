@@ -14,8 +14,6 @@
   transition:all .2s linear;
 }
 
-
-
 html{
   font-size: 62.5%;
   overflow-x: hidden;
@@ -70,7 +68,16 @@ padding: .5rem;
   transition: 0.3s;
   cursor: pointer;
 }
-
+.menu-button:hover{
+  border: 1px solid white;
+  background: none;
+}
+.menu-button:hover a{
+  color: white;
+}
+.menu-button:hover a{
+  color: var(--green);
+}
 .home{
   display: flex;
   flex-wrap: wrap;
@@ -222,11 +229,19 @@ padding: .5rem;
   color: var(--green);
   z-index: 100;
 }
+
+.product-content h3:hover{
+  border: 1px solid black;
+  color: var(--green);
+  background: white;
+  cursor: pointer;
+}
 .inner-product img{
   width: 100%;
 }
 .inner-product img{
 padding:1rem;
+animation: float 3s linear infinite;
 
 }
 
@@ -306,14 +321,14 @@ padding:1rem;
   border: 1px solid var(--green);
   font-size: 18px;
 }
-/* .inner-blog-content a:hover{
+.inner-blog-content a:hover{
   cursor: pointer;
   background: var(--green);
   color: white;
   border-radius: 10px;
-} */
+}
 .main-footer{
-  background-image: url(images/footer.png);
+  background-image: url("images/footer.png");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
