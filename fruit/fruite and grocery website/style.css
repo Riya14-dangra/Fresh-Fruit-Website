@@ -49,11 +49,19 @@ font-size: 18px;
 margin-left: 1rem;
 color: white;
 padding: .5rem;
+border: 1px solid transparent;
+line-height: 2;
 }
 
 .navbar a:hover{
   border: 1px solid white;
   }
+
+.navbar a:focus {
+  outline: 2px solid white;
+  outline-offset: 4px;
+  transition: none;
+}
 
 .navbar{
   margin-left: 90px;
@@ -67,6 +75,7 @@ padding: .5rem;
   border-bottom-left-radius: 10px;
   transition: 0.3s;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 .menu-button:hover{
   border: 1px solid white;
@@ -75,9 +84,13 @@ padding: .5rem;
 .menu-button:hover a{
   color: white;
 }
-.menu-button:hover a{
-  color: var(--green);
+
+.menu-button:focus {
+  outline: 2px solid white;
+  outline-offset: 4px;
+  transition: none;
 }
+
 .home{
   display: flex;
   flex-wrap: wrap;
