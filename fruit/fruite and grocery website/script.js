@@ -44,3 +44,45 @@ window.onscroll = function() {
     document.getElementsByTagName("header")[0].classList.remove(className);
   }
 };
+let fname = document.getElementById("fname");
+let email = document.getElementById("email");
+let val = true;
+fname.addEventListener("blur", () => {
+  let str = fname.value;
+  let reg = /^([a-zA-Z]){0,10}$/;
+  if (!reg.test(str)) {
+    console.log("Validated");
+    setError("ferror", "Invalid Name");
+    val = false;
+  } else {
+    document.getElementById("ferror").innerHTML = "";
+    document.getElementById("ferror").style.color = "red";
+    val = true;
+  }
+});
+email.addEventListener("blur", () => {
+  let str = email.value;
+  let reg =
+    /^([a-zA-Z.]){0,20}([0-9]){0,20}@([a-zA-Z]){0,20}\.([a-zA-Z]){0,10}(\.in)?$/;
+  if (!reg.test(str)) {
+    console.log("Validated");
+    setError("eerror", "Invalid Email");
+    val = false;
+  } else {
+    document.getElementById("eerror").innerHTML = "";
+    val = true;
+  }
+});
+function setError(id, error) {
+  ele = document.getElementById(id);
+  ele.innerHTML = `<h1 style="color:'red'">${error}</h1>`;
+}
+let num = document.getElementById("number");
+function validateForm() {
+  if (num.value === "") {
+    setError("nerror", "Enter Number");
+    val = false;
+  }
+  return val;
+}
+
